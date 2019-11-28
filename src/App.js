@@ -29,9 +29,6 @@ class App extends Component {
 
     if (clickedCar[0].clicked) {
 
-      console.log("Correct Car: " + correctCar);
-      console.log("Best Score: " + bestScore);
-
       correctCar = 0;
       head = "You already clicked on this car";
 
@@ -93,9 +90,9 @@ class App extends Component {
 
         <h3 className="scoreSummary">{this.state.head}</h3>
 
-        <h3 className="scoreSummary (card-header)">Correct Car: {this.state.correctCar}</h3>
+        <h3 className="scoreSummary">Correct Car: {this.state.correctCar}</h3>
 
-        <h3 className="scoreSummary (card-header)">Best Score: {this.state.bestScore}</h3>
+        <h3 className="scoreSummary">Best Score: {this.state.bestScore}</h3>
 
         <div className="container">
           <div className="row">
