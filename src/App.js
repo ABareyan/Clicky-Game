@@ -7,7 +7,7 @@ import "./App.css";
 
 let correctCar = 0;
 let bestScore = 0;
-let head = "Click on a movie poster to gain points! Click on the same one twice and you lose!";
+let head = "Click on the image to guess the car, if you'll click on the same car, you'll lose the game.";
 
 class App extends Component {
 
@@ -29,11 +29,11 @@ class App extends Component {
 
     if (clickedCar[0].clicked) {
 
-      console.log("Correct Guesses: " + correctCar);
+      console.log("Correct Car: " + correctCar);
       console.log("Best Score: " + bestScore);
 
       correctCar = 0;
-      head = "Bummer! You already clicked on this one."
+      head = "You already clicked on this car";
 
       for (let i = 0; i < cars.length; i++) {
         cars[i].clicked = false;
@@ -49,7 +49,7 @@ class App extends Component {
 
       correctCar++;
 
-      head = "Great! You haven't click on that one yet! Keep going!";
+      head = "You guessed correctly";
 
       if (correctCar > bestScore) {
         bestScore = correctCar;
@@ -67,7 +67,7 @@ class App extends Component {
 
       correctCar = 0;
 
-      head = "WOW!!! You got ALL of them!!! Now, let's see if you can do it again!";
+      head = "You guessed all cars!";
       bestScore = 12;
       this.setState({ bestScore });
 
@@ -87,11 +87,13 @@ class App extends Component {
   render() {
     return (
       <Main>
-        <Navbar>Clickity Clack Movie Game</Navbar>
+        <Navbar>
+          Clicky Cars Game
+        </Navbar>
 
         <h3 className="scoreSummary">{this.state.head}</h3>
 
-        <h3 className="scoreSummary (card-header)">Correct Guesses: {this.state.correctCar}</h3>
+        <h3 className="scoreSummary (card-header)">Correct Car: {this.state.correctCar}</h3>
 
         <h3 className="scoreSummary (card-header)">Best Score: {this.state.bestScore}</h3>
 
