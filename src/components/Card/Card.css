@@ -1,0 +1,24 @@
+.card {
+    background: #fff;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card>.img {
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    justify-content: center;  
+    margin: 20px;   
+}
+
+.card>.img:hover {
+  width: 210px; 
+  box-shadow: 0 6px 6px #999;
+  cursor: pointer;
+}
+
+.card>.img>img {
+    width: 200px;   
+}
